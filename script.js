@@ -7,12 +7,11 @@ const gameover = document.querySelector(".gameover");
 let points = 0;
 let timers = 0;
 let out;
-function pointerr() {
   randombox.addEventListener("click", function () {
     points += 1;
     score.textContent = points;
   });
-}
+
 button.addEventListener("click", function () {
   clearInterval(out);
 
@@ -31,7 +30,6 @@ button.addEventListener("click", function () {
     const axisxy = Math.floor(Math.random() * 100);
     randombox.style.top = `${axisx}%`;
     randombox.style.right = `${axisxy}%`;
-    pointerr();
   }, 1000);
 
   setTimeout(() => {
